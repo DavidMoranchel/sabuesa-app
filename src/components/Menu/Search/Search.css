@@ -1,0 +1,35 @@
+.App-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+input[type="text"] {
+  height: 35px;
+  border: 2px solid #85e4e9;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #7e7e7e;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 0;
+  border: 0;
+  font-size: 18px;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+button[type="submit"]:focus {
+  outline: #eaeaea;
+}
+
+svg.svg-inline--fa.fa-search.fa-w-16.fa-lg.icon {
+  color: #f53fcc;
+}

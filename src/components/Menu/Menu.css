@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 60px;
+  background-color: #7fe6e8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.H-section {
+  flex: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.H-section:first-child {
+  justify-content: flex-start;
+  padding-left: 30px;
+  color: white;
+}
+
+/* .App-navbar */

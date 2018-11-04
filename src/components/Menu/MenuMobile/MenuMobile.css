@@ -1,0 +1,126 @@
+.App-navbar {
+  position: absolute;
+  min-height: calc(100vh - 60px);
+  background-color: white;
+  top: 61px;
+  padding: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: end;
+  align-items: center;
+  transition: .5s ease-in all;
+}
+
+.m-on{
+  left: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.Item-header, .Item-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7e7e7e;
+}
+
+.Item-header {
+  height: 50px;
+  font-size: 26px;
+  font-variant: small-caps;
+}
+
+.Item-header p {
+  margin-left: 10px;
+  font-family: 'Heebo', sans-serif;
+}
+
+svg.svg-inline--fa.fa-bone.fa-w-20.fa-sm.icon {
+  color: #fdde00;
+}
+
+.Item-section {
+  height: 30px;
+  font-size: 20px;
+}
+
+.Item-section a {
+  font-family: 'Heebo', sans-serif;
+  cursor: pointer;
+  transition: .3s ease-out all;
+}
+
+.Item-section a:hover {
+  padding-left: 15px;
+}
+
+/* media queries */
+/* ##Device = Desktops */
+@media (min-width: 1281px) {
+  .App-navbar {
+    width: 30vw;
+  }
+  .m-off {
+    left: -30vw;
+  }
+}
+/* ##Device = Laptops, Desktops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .App-navbar {
+    width: 30vw;
+  }
+  .m-off {
+    left: -30vw;
+  }
+}
+/* ##Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .App-navbar {
+    width: 50vw;
+  }
+  .m-off {
+    left: -50vw;
+  }
+}
+ /* ##Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .App-navbar {
+    width: 100vw;
+  }
+  .m-off {
+    left: -100vw;
+  }
+  .Item-header {
+    height: 70px;
+    font-size: 40px;
+  }
+  .Item-section {
+    height: 50px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 220px) and (max-width: 480px) {
+  .App-navbar {
+    width: 100vw;
+  }
+  .m-off {
+    left: -100vw;
+  }
+  .Item-header {
+    height: 70px;
+    font-size: 40px;
+  }
+  .Item-section {
+    height: 50px;
+    font-size: 26px;
+  }
+}
