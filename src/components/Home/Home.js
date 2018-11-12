@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 // components
-import Card from '../Card/Card';
 import RecentPost from './RecentPost/RecentPost';
 // styles
 import './Home.css';
 // icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return(

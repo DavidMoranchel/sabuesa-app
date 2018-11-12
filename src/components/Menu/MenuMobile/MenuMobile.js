@@ -7,9 +7,9 @@ import './MenuMobile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class MenuMobile extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
@@ -35,17 +35,17 @@ class MenuMobile extends Component {
             </p>
           </li>
           <li className="Item-section">
-            <a>
+            <a href="/">
               Ejemplo
             </a>
           </li>
           <li className="Item-section">
-            <a>
+            <a href="/">
               Ejemplo
             </a>
           </li>
           <li className="Item-section">
-            <a>
+            <a href="/">
               Ejemplo
             </a>
           </li>
