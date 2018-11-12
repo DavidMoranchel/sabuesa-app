@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // components
 import Menu from './components/Menu/Menu';
+import Home from './components/Home/Home';
 // css
 import './App.css';
 //icons
@@ -16,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Menu></Menu>
         <div className="App-content">
-
+          <Home></Home>
         </div>
       </div>
     );

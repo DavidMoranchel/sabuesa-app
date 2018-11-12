@@ -5,10 +5,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #eaeaea;
+  /* background: #eaeaea; */
 }
 
-h1, p {
+h1, p, figure {
   margin: 0;
   padding: 0;
 }

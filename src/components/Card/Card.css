@@ -1,0 +1,85 @@
+.Card {
+  /* width: calc(30% - 10px); */
+  /* width: 250px; */
+  background: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .2s ease-in all;
+}
+
+.Card:hover{
+  border: 2px solid #f543cb;
+}
+
+.Card-img figure img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.Card-content {
+  padding: 10px;
+}
+
+.Card-title {
+  color: #535353;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: 600;
+  font-variant: petite-caps;
+  margin-bottom: 10px;
+}
+
+.Card-description {
+  color: #828282;
+  font-family: 'Poppins';
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.Card-author {
+  color: #828282;
+  font-size: 12px;
+}
+
+.Card-author span {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: 600;
+  font-variant: petite-caps;
+  color: #3cb7b8;
+}
+
+/* media queries */
+/* ##Device = Desktops */
+@media (min-width: 1281px) {
+
+}
+/* ##Device = Laptops, Desktops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+/* ##Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+ /* ##Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* ##Device = Mobiles */
+@media (min-width: 300px) and (max-width: 480px) {
+
+  .Card {
+    /* width: 100%; */
+  }
+
+  .Card-title, .Card-author span {
+    font-size: 24px;
+  }
+  .Card-description {
+    font-size: 16px;
+  }
+}

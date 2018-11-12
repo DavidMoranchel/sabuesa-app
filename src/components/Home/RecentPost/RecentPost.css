@@ -1,0 +1,25 @@
+.rp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rp-column {
+  flex: 25%;
+  max-width: 25%;
+}
+
+@media (max-width: 800px) {
+    .rp-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .rp-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
