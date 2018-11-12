@@ -1,0 +1,13 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null",
+    "post": {
+      "$post": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.hasChildren(['views'])"
+      }
+    }
+  }
+}
