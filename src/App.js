@@ -6,10 +6,10 @@ import Home from './components/Home/Home';
 import './App.css';
 //icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faBone, faTimes, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBone, faTimes, faSearch, faPaw } from '@fortawesome/free-solid-svg-icons'
 
 // add icons
-library.add(faBars, faBone, faTimes, faSearch)
+library.add(faBars, faBone, faTimes, faSearch, faPaw);
 
 class App extends Component {
   render() {

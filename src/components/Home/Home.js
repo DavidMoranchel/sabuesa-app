@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // components
 import RecentPost from './RecentPost/RecentPost';
+import MostViewedPosts from './MostViewedPosts/MostViewedPosts';
 // styles
 import './Home.css';
 // icons
@@ -14,7 +15,13 @@ class Home extends Component {
   render() {
     return(
       <div className="App-home">
-        <RecentPost></RecentPost>
+        <div className="Home-articles">
+          <RecentPost></RecentPost>
+          <MostViewedPosts></MostViewedPosts>
+        </div>
+        <div className="Home-aside">
+
+        </div>
       </div>
     );
   }

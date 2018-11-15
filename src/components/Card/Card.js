@@ -5,20 +5,18 @@ import './Card.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
-    let {title, img, des, author}  = this.props;
+    let {title, img, des, author, type}  = this.props;
+    let typeCard = type === "v" ? "Card-v" : "Card-h";
     return(
-      <div className="Card">
-        <div className="Card-img">
+      <div className={`Card ${typeCard}`}>
+        <div className="Card-container-img">
           <figure>
-            <img src={img} alt=""/>
+            <img className="Card-img" src={img} alt=""/>
           </figure>
         </div>
-        <div className="Card-content">
+        <div className="Card-container-content">
           <p className="Card-title">{ title }</p>
           <p className="Card-description">{ des }</p>
           <p className="Card-author">

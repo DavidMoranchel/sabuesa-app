@@ -1,6 +1,4 @@
 .Card {
-  /* width: calc(30% - 10px); */
-  /* width: 250px; */
   background: white;
   border-radius: 10px;
   border: 2px solid transparent;
@@ -8,18 +6,40 @@
   transition: .2s ease-in all;
 }
 
-.Card:hover{
-  border: 2px solid #f543cb;
+.Card-h {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.Card-img figure img {
+.Card-h .Card-container-img {
+  flex: 40%;
+  max-width: 40%;
+}
+
+.Card-h .Card-container-content {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.Card:hover .Card-title{
+  color: #f543cb;
+}
+.Card:hover .Card-img {
+  filter: invert(.8);
+}
+
+.Card-img {
   width: 100%;
   vertical-align: top;
   border-radius: 10px 10px 0px 0px;
+  transition: .2s ease-in all;
 }
 
-.Card-content {
+.Card-container-content {
   padding: 10px;
+  transition: .2s ease-in all;
 }
 
 .Card-title {
@@ -28,14 +48,12 @@
   font-size: 18px;
   font-weight: 600;
   font-variant: petite-caps;
-  margin-bottom: 10px;
 }
 
 .Card-description {
   color: #828282;
   font-family: 'Poppins';
   font-size: 12px;
-  margin-bottom: 10px;
 }
 
 .Card-author {
@@ -62,24 +80,52 @@
 }
 /* ##Device = Tablets, Ipads (portrait) */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .Card-h .Card-container-img {
+    flex: 50%;
+    max-width: 50%;
+  }
 
+  .Card-h .Card-container-content {
+    flex: 45%;
+    max-width: 45%;
+  }
 }
  /* ##Device = Low Resolution Tablets, Mobiles (Landscape) */
 @media (min-width: 481px) and (max-width: 767px) {
-
+  .Card-h .Card-container-img, .Card-h .Card-container-content {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .Card {
+    position: relative;
+  }
+  .Card-container-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  .Card-title {
+    color: #f543cb;
+  }
+  .Card-description, .Card-author {
+    color: white;
+  }
 }
 
 /* ##Device = Mobiles */
 @media (min-width: 300px) and (max-width: 480px) {
-
-  .Card {
-    /* width: 100%; */
-  }
-
   .Card-title, .Card-author span {
     font-size: 24px;
   }
   .Card-description {
     font-size: 16px;
+  }
+  .Card-h .Card-container-img, .Card-h .Card-container-content {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .Card-title {
+    color: #f543cb;
   }
 }

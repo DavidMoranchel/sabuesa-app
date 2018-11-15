@@ -4,4 +4,17 @@
 
 .App-content {
   width: 100%;
+  padding: 40px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .App-content {
+    padding: 25px;
+  }
+}
+/* ##Device = Mobiles */
+@media (max-width: 480px) {
+  .App-content {
+    padding: 20px;
+  }
 }
