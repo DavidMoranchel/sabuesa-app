@@ -1,0 +1,59 @@
+.Detail-section {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 40px;
+}
+
+.Detail-article {
+  flex: 70%;
+  max-width: 70%;
+}
+
+.Detail-aside {
+  flex: 30%;
+  max-width: 30%;
+}
+
+.Detail-title, .Detail-info {
+  color: #535353;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-variant: petite-caps;
+}
+
+.Detail-date {
+  margin-right: 20px;
+}
+
+.icon-date {
+  color: #7fe6e8;
+  margin-right: 10px;
+ }
+.icon-author {
+  color: #f53fcc ;
+  margin-right: 10px;
+ }
+
+.Detail-subtitle {
+  color: #535353;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.Detail-img {
+   max-width: 100%;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+ }
+
+.Detail-content * {
+  color: #656565 !important;
+  font-family: 'Poppins' !important;
+}
+
+.Detail-content img {
+ max-width: 100%;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+}

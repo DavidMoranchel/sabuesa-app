@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _postRef from '../../../fire';
+import PostRef from '../../../fire';
 // components
 import Card from '../../Card/Card';
 // styles
@@ -11,24 +11,36 @@ class RecentPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
-      firstPost: []
+      posts: []
     }
   }
 
-  componentWillMount() {
-    let _posts = _postRef.orderByChild('dateNow');
-    _posts.limitToLast(10).on('child_added', (snapshot) => {
-      let postAdded = { content: snapshot.val() , key:snapshot.key };
-      this.setState({
-        posts: [postAdded].concat(this.state.posts)
-      })
+  componentDidMount() {
+    let recentPost = PostRef.orderByChild('dateNow');
+    this.handler = recentPost.limitToLast(10).on('value', snapshot => {
+      let postArray = [];
+      snapshot.forEach((snap) => {
+        let { title, urlImg, description, username } = snap.val();
+        postArray.push({
+          title,
+          urlImg,
+          description,
+          username,
+          key: snap.key
+        });
+      });
+      this.setState({ posts: postArray });
     })
   }
 
+  componentWillUnmount() {
+     PostRef.off('value', this.handler);
+   }
+
   render() {
-    let posts = this.state.posts;
-    console.log(posts,'=> rp posts');
+    let posts = this.state.posts.reverse();
+    let firstColumn = posts.slice(0,5).map(p  => <Card key={p.key} id={ p.key } type="v" title={p.title} img={p.urlImg} des={ p.description } author={ p.username }></Card> )
+    let secondColumn = posts.slice(5,10).map(p => <Card key={p.key} id={ p.key } type="v" title={p.title} img={p.urlImg} des={ p.description } author={ p.username }></Card> )
     return(
       <div className="Home-section">
         <p className="Home-title">
@@ -41,14 +53,10 @@ class RecentPost extends Component {
         </p>
         <div className="rp-container">
           <div className="rp-column">
-            {
-              posts.slice(0,5).map((p)  => <Card key={p.key} type="v" title={p.content.title} img={p.content.urlImg} des={ p.content.description } author={ p.content.username }></Card> )
-            }
+            { firstColumn }
           </div>
           <div className="rp-column">
-            {
-              posts.slice(5,10).map((p) => <Card key={p.key} type="v" title={p.content.title} img={p.content.urlImg} des={ p.content.description } author={ p.content.username }></Card> )
-            }
+            { secondColumn }
           </div>
 
         </div>

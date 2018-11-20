@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _postRef from '../../../fire';
+import PostRef from '../../../fire';
 // components
 import Card from '../../Card/Card';
 // styles
@@ -15,20 +15,32 @@ class MostViewedPosts extends Component {
     }
   }
 
-  componentWillMount() {
-    let _posts = _postRef.orderByChild('views/count');
-    _posts.limitToLast(10).on('child_added', (snapshot) => {
-      let postAdded = { content: snapshot.val() , key:snapshot.key };
-      this.setState({
-        posts: [postAdded].concat(this.state.posts)
-      })
+  componentDidMount() {
+    let mostViewedPosts = PostRef.orderByChild('views/count');
+    this.handler = mostViewedPosts.limitToLast(10).on('value', snapshot => {
+      let postArray = [];
+      snapshot.forEach((snap) => {
+        let { title, urlImg, description, username } = snap.val();
+        postArray.push({
+          title,
+          urlImg,
+          description,
+          username,
+          key: snap.key
+        });
+      });
+      this.setState({ posts: postArray });
     })
   }
 
+  componentWillUnmount() {
+     PostRef.off('value', this.handler);
+   }
 
   render() {
-    let posts = this.state.posts
-    console.log(posts,'=> mvp posts');
+    let posts = this.state.posts.reverse().map(function(p) {
+      return <Card key={ p.key } id={ p.key } type="h" title={p.title} img={p.urlImg} des={ p.description } author={ p.username }></Card>
+    });
     return(
       <div className="Home-section">
         <p className="Home-title">
@@ -40,9 +52,7 @@ class MostViewedPosts extends Component {
         <span className="Home-title-text">Lo + perro</span>
         </p>
         <div className="mvp-container">
-          {
-            posts.map(p => <Card key={ p.key } type="h" title={p.content.title} img={p.content.urlImg} des={ p.content.description } author={ p.content.username }></Card>)
-          }
+          { posts }
         </div>
       </div>
 

@@ -8,7 +8,7 @@ body {
   /* background: #eaeaea; */
 }
 
-h1, p, figure {
+h1, h3, p, figure {
   margin: 0;
   padding: 0;
 }

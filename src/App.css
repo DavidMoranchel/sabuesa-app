@@ -5,6 +5,7 @@
 .App-content {
   width: 100%;
   padding: 40px;
+  padding-top: 100px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

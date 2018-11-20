@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, Link } from "react-router-dom";
 //components
 import Search from '../Search/Search'
 //css
@@ -35,9 +36,18 @@ class MenuMobile extends Component {
             </p>
           </li>
           <li className="Item-section">
-            <a href="/">
-              Ejemplo
-            </a>
+            <Link
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="Item-section">
+            <Link
+              to="/test"
+            >
+              Card
+            </Link>
           </li>
           <li className="Item-section">
             <a href="/">
