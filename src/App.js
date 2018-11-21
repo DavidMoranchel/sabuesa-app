@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 // components
 import Menu from './components/Menu/Menu';
 import Home from './components/Home/Home';
+import Sections from './components/Sections/Sections';
 import PostDetail from './components/PostDetail/PostDetail';
 
 // css
@@ -21,8 +22,9 @@ class App extends Component {
         <Menu></Menu>
         <div className="App-content">
           <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/post/:id' component={PostDetail} />
+            <Route path='/' exact component={ Home } />
+            <Route path='/post/:id' exact component={ PostDetail } />
+            <Route path='/section/:section' exact component={ Sections } />
           </Switch>
         </div>
       </div>

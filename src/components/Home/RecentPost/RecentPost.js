@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostRef from '../../../fire';
+import { PostRef } from '../../../fire';
 // components
 import Card from '../../Card/Card';
 // styles

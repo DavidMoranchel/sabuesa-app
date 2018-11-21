@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostRef from '../../fire';
+import { PostRef } from '../../fire';
 import './PostDetail.css';
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -22,7 +22,7 @@ class PostDetail extends Component {
   render() {
 
     console.log(this.state.post);
-    let { title, urlImg, dateNow, username, subtitle, content } = this.state.post;
+    let { title, urlImg, dateNow, username, userImg, subtitle, content } = this.state.post;
     let formatDate;
     if (dateNow) {
       formatDate = new Date(dateNow).toLocaleDateString("es-ES", {
@@ -36,7 +36,7 @@ class PostDetail extends Component {
         <div className="Detail-article">
           <div className="Detail-header">
             <p className="Detail-info">
-              <span className="Detail-date">
+              <span className="info-date">
                 <FontAwesomeIcon
                   className="icon-date"
                   icon="calendar"
@@ -44,7 +44,7 @@ class PostDetail extends Component {
                 />
                 { formatDate }
               </span>
-              <span className="Detail-author">
+              <span>
                 <FontAwesomeIcon
                   className="icon-author"
                   icon="user"
@@ -65,6 +65,12 @@ class PostDetail extends Component {
             className="Detail-content"
             dangerouslySetInnerHTML={{__html: content}}
           >
+          </div>
+          <div className="Detail-author">
+            <figure>
+              <img className="author-img" src={ userImg } alt={ username }/>
+            </figure>
+            <p className="author-name">{ username }</p>
           </div>
         </div>
         <div className="Detail-aside"></div>

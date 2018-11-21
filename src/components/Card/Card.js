@@ -14,7 +14,6 @@ class Card extends Component {
   handleClickCard() {
     let post = `post/bs${this.props.id.slice(1)}`;
     this.props.history.push(post);
-    console.log(post);
   }
 
   render() {
