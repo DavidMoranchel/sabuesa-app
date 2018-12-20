@@ -42,7 +42,6 @@ class Menu extends Component {
               </li>);
     });
     let icon = this.state.isMenuActive ? "times" : "bars";
-    console.log(`=> ${sections}`);
     return (
       <header className="App-header">
         <nav>
