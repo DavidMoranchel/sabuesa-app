@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PostRef, SectionRef } from '../../fire';
+import { sectionsRef, postsRef } from '../../fire';
 // styles
 import './Sections.css';
 // icons
@@ -37,7 +37,7 @@ class Sections extends Component {
   }
 
   getSection(section) {
-    this.handlerSection = SectionRef.orderByChild('key').equalTo(section);
+    this.handlerSection = sectionsRef.orderByChild('key').equalTo(section);
     this.handlerSection.on('value', snapshot => {
       let infoSection = Object.values(snapshot.val())[0];
       let { key, name, img } = infoSection
@@ -51,7 +51,7 @@ class Sections extends Component {
   }
 
   getPosts(section) {
-    this.handlerPosts = PostRef.orderByChild('section').equalTo(section);
+    this.handlerPosts = postsRef.orderByChild('section').equalTo(section);
     this.handlerPosts.on('value', snapshot => {
       let postArray = [];
       snapshot.forEach( snap => {

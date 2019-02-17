@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PostRef } from '../../../fire';
+import { postsRef } from '../../../fire';
 // components
 import Card from '../../Card/Card';
 // styles
@@ -16,7 +16,7 @@ class MostViewedPosts extends Component {
   }
 
   componentDidMount() {
-    let mostViewedPosts = PostRef.orderByChild('views/count');
+    let mostViewedPosts = postsRef.orderByChild('views/count');
     this.handler = mostViewedPosts.limitToLast(10).on('value', snapshot => {
       let postArray = [];
       snapshot.forEach((snap) => {
@@ -34,8 +34,8 @@ class MostViewedPosts extends Component {
   }
 
   componentWillUnmount() {
-     PostRef.off('value', this.handler);
-   }
+    postsRef.off('value', this.handler);
+  }
 
   render() {
     let posts = this.state.posts.reverse().map(function(p) {

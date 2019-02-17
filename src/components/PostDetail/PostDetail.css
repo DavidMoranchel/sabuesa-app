@@ -77,3 +77,20 @@
 .author-name {
   color: #f53fcc;
 }
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (max-width: 767px) {
+  .Detail-section {
+    flex-flow: column wrap;
+  }  
+  .Detail-article, .Detail-aside {
+    max-width: 100%;
+  }
+}
+
+/* ##Device = Mobiles */
+@media (min-width: 300px) and (max-width: 480px) {
+  .Detail-section {
+    padding: 0%;
+  }  
+}

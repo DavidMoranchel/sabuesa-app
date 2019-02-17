@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
-import { SectionRef } from '../../fire';
+import { sectionsRef } from '../../fire';
 // components
 import Search from '../Search/Search'
 // styles
@@ -19,7 +19,7 @@ class Menu extends Component {
   }
 
   componentDidMount() {
-    this.handler = SectionRef.on('value', snapshot => {
+    this.handler = sectionsRef.on('value', snapshot => {
       let sectionArray = [];
       snapshot.forEach((snap) => {
         let { img, key, name } = snap.val();

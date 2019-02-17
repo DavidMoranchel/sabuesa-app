@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PostRef } from '../../../fire';
+import { postsRef } from '../../../fire';
 // components
 import Card from '../../Card/Card';
 // styles
@@ -16,7 +16,7 @@ class RecentPost extends Component {
   }
 
   componentDidMount() {
-    let recentPost = PostRef.orderByChild('dateNow');
+    let recentPost = postsRef.orderByChild('dateNow');
     this.handler = recentPost.limitToLast(10).on('value', snapshot => {
       let postArray = [];
       snapshot.forEach((snap) => {
@@ -34,7 +34,7 @@ class RecentPost extends Component {
   }
 
   componentWillUnmount() {
-     PostRef.off('value', this.handler);
+     postsRef.off('value', this.handler);
    }
 
   render() {

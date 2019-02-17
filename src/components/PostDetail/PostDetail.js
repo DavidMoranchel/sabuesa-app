@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PostRef } from '../../fire';
+import { postsRef } from '../../fire';
 import './PostDetail.css';
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,14 +14,12 @@ class PostDetail extends Component {
 
   componentDidMount() {
     let id = `-${this.props.match.params.id.slice(2)}`;
-    this.handler = PostRef.child(id).once("value").then(snapshot => {
+    this.handler = postsRef.child(id).once("value").then(snapshot => {
       this.setState({ post: snapshot.val() });
     });
   }
 
   render() {
-
-    console.log(this.state.post);
     let { title, urlImg, dateNow, username, userImg, subtitle, content } = this.state.post;
     let formatDate;
     if (dateNow) {
