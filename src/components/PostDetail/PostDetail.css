@@ -16,9 +16,16 @@
 
 .Detail-title, .Detail-info, .author-name{
   color: #535353;
-  font-family: 'Open Sans';
   font-weight: 600;
-  font-variant: petite-caps;
+}
+
+.Detail-info {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.Detail-info .info-date{
+  margin-bottom: 10px;
 }
 
 .info-date {
@@ -41,7 +48,7 @@
   margin-bottom: 20px;
 }
 
-.Detail-img {
+.Detail-img {author-name
    max-width: 100%;
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
@@ -50,7 +57,7 @@
 .Detail-content * {
   color: #656565 !important;
   font-family: 'Poppins' !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   margin-bottom: 20px;
 }
 

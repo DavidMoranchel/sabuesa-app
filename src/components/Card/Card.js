@@ -30,10 +30,10 @@ class Card extends Component {
           </figure>
         </div>
         <div className="Card-container-content">
-          <p className="Card-title">{ title }</p>
+          <p className="Font-sabuesa Card-title">{ title }</p>
           <p className="Card-description">{ des }</p>
           <p className="Card-author">
-            by <span>{ author }</span>
+            by <span className="Font-sabuesa">{ author }</span>
           </p>
         </div>
       </div>

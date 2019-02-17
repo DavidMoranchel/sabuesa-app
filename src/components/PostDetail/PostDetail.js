@@ -33,31 +33,30 @@ class PostDetail extends Component {
       <div className="Detail-section">
         <div className="Detail-article">
           <div className="Detail-header">
-            <p className="Detail-info">
-              <span className="info-date">
+            <div className="Font-sabuesa Detail-info">
+              <p className="info-date">
                 <FontAwesomeIcon
                   className="icon-date"
                   icon="calendar"
                   size="lg"
                 />
                 { formatDate }
-              </span>
-              <span>
+              </p>
+              <p>
                 <FontAwesomeIcon
                   className="icon-author"
                   icon="user"
                   size="lg"
                 />
                 { username }
-              </span>
-            </p>
-            <br/>
+              </p>
+            </div>
             <figure>
               <img className="Detail-img" src={ urlImg } alt={ title }/>
             </figure>
           </div>
           <br/>
-          <h1 className="Detail-title">{ title }</h1>
+          <h1 className="Font-sabuesa Detail-title">{ title }</h1>
           <h3 className="Detail-subtitle">{ subtitle }</h3>
           <div
             className="Detail-content"
@@ -68,7 +67,7 @@ class PostDetail extends Component {
             <figure>
               <img className="author-img" src={ userImg } alt={ username }/>
             </figure>
-            <p className="author-name">{ username }</p>
+            <p className="Font-sabuesa author-name">{ username }</p>
           </div>
         </div>
         <div className="Detail-aside"></div>

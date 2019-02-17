@@ -1,11 +1,37 @@
 .App {
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .App-content {
   width: 100%;
   padding: 40px;
   padding-top: 100px;
+}
+
+.Cont-title {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.Cont-title-logo {
+  color: #f543cb;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.Font-sabuesa {
+  font-family: 'Open Sans';
+  font-variant: petite-caps;
+}
+
+.Font-title {
+  color: #535353;
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

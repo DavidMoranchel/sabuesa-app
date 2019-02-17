@@ -43,13 +43,13 @@ class MostViewedPosts extends Component {
     });
     return(
       <div className="Home-section">
-        <p className="Home-title">
+        <p className="Cont-title">
           <FontAwesomeIcon
-            className="Home-title-logo mvp-logo"
+            className="Cont-title-logo mvp-logo"
             icon="paw"
             size="lg"
           />
-        <span className="Home-title-text">Lo + perro</span>
+        <span className="Font-sabuesa Font-title">Lo + perro</span>
         </p>
         <div className="mvp-container">
           { posts }

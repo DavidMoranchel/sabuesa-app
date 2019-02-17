@@ -3,7 +3,7 @@ import { sectionsRef, postsRef } from '../../fire';
 // styles
 import './Sections.css';
 // icons
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Sections extends Component {
   constructor(props) {
@@ -74,7 +74,14 @@ class Sections extends Component {
 
     return(
       <div>
-        <h1>{ nameSection }</h1>
+        <p className="Cont-title">
+          <FontAwesomeIcon
+            className="Cont-title-logo"
+            icon="hand-point-right"
+            size="lg"
+          />
+          <span className="Font-sabuesa Font-title">{ nameSection }</span>
+        </p>
       </div>
     )
   }

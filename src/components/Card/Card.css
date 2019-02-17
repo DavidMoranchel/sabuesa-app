@@ -44,10 +44,8 @@
 
 .Card-title {
   color: #535353;
-  font-family: 'Open Sans';
   font-size: 18px;
   font-weight: 600;
-  font-variant: petite-caps;
 }
 
 .Card-description {
@@ -62,10 +60,8 @@
 }
 
 .Card-author span {
-  font-family: 'Open Sans';
   font-size: 18px;
   font-weight: 600;
-  font-variant: petite-caps;
   color: #3cb7b8;
 }
 

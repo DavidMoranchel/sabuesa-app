@@ -43,13 +43,13 @@ class RecentPost extends Component {
     let secondColumn = posts.slice(5,10).map(p => <Card key={p.key} id={ p.key } type="v" title={p.title} img={p.urlImg} des={ p.description } author={ p.username }></Card> )
     return(
       <div className="Home-section">
-        <p className="Home-title">
+        <p className="Cont-title">
           <FontAwesomeIcon
-            className="Home-title-logo"
+            className="Cont-title-logo"
             icon="paw"
             size="lg"
           />
-        <span className="Home-title-text">Posts Recientes</span>
+        <span className="Font-sabuesa Font-title">Posts Recientes</span>
         </p>
         <div className="rp-container">
           <div className="rp-column">

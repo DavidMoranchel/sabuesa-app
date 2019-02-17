@@ -10,10 +10,10 @@ import PostDetail from './components/PostDetail/PostDetail';
 import './App.css';
 //icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faBone, faTimes, faSearch, faPaw, faCalendar, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBone, faTimes, faSearch, faPaw, faCalendar, faUser, faHandPointRight } from '@fortawesome/free-solid-svg-icons'
 
 // add icons
-library.add(faBars, faBone, faTimes, faSearch, faPaw, faCalendar, faUser);
+library.add(faBars, faBone, faTimes, faSearch, faPaw, faCalendar, faUser, faHandPointRight);
 
 class App extends Component {
   render() {

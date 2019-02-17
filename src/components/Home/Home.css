@@ -14,28 +14,6 @@
   max-width: 30%;
 }
 
-.Home-title {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
-}
-
-.Home-title-logo {
-  color: #f543cb;
-  font-size: 30px;
-  margin-right: 10px;
-}
-.Home-title-text {
-  color: #535353;
-  font-size: 30px;
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-variant: petite-caps;
-  margin-right: 10px;
-}
-
 @media (min-width: 481px) and (max-width: 767px) {
   .Home-articles, .Home-aside {
     flex: 100%;
